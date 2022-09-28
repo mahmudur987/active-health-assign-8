@@ -3,6 +3,7 @@ import './Body.css'
 
 import React, { useEffect, useState } from 'react';
 import Practice from './Practice/Practice';
+import Profile from '../Profile/Profile';
 
 const Body = () => {
     const [practices, SetPractices] = useState([]);
@@ -10,8 +11,23 @@ const Body = () => {
         fetch('items.json').then(res => res.json()).then(data => SetPractices(data))
     }, [])
 
-    console.log(practices)
+    const [numbers, Setnumbers] = useState([])
+    const addTime = (items) => {
+        let newNumbers = [];
+        if (items) {
+            newNumbers = [...numbers, items]
+        }
 
+        Setnumbers(newNumbers);
+    }
+    const initialValue = 0;
+    const sumWithInitial = numbers.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+        initialValue
+    );
+
+    console.log(sumWithInitial);
+    // console.log(numbers)
     return (
         <div className='body'>
             <div className='main'>
@@ -20,24 +36,15 @@ const Body = () => {
 
                 <div className='Practice'>
                     {
-                        practices.map(practice => <Practice practice={practice} key={practice._id}></Practice>)
+                        practices.map(practice => <Practice practice={practice} addtime={addTime} key={practice._id}> </Practice>)
 
                     }
                 </div>
-
-
-
+            </div>
+            <div>
+                <Profile sum={sumWithInitial}></Profile>
 
             </div>
-
-
-
-
-
-
-
-
-            <div> result</div>
 
         </div>
     );

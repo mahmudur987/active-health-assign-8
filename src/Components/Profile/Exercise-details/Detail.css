@@ -1,0 +1,11 @@
+.details {
+    margin-top: 30px;
+}
+
+.details p {
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
