@@ -1,0 +1,25 @@
+.exercise {
+    background-color: antiquewhite;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.exercise img {
+    width: 95%;
+    height: 35%;
+}
+
+.exercise button {
+    width: 100%;
+    background-color: darkblue;
+    color: aliceblue;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+}
