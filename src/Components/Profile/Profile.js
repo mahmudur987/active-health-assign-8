@@ -8,7 +8,8 @@ const Profile = (props) => {
     const [BreakTime, Setbreaktime] = useState(0)
 
     const addTime = (y) => {
-        Setbreaktime(y)
+        Setbreaktime(y);
+        localStorage.setItem('break-Time', y)
     }
 
     return (
