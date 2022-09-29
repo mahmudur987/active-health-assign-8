@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Body = () => {
-    const notify = () => toast.info("Wow so easy! I can open It");
+    const notify = () => toast.info("Wow congratulation! I can open It");
     const [practices, SetPractices] = useState([]);
     useEffect(() => {
         fetch('items.json').then(res => res.json()).then(data => SetPractices(data))

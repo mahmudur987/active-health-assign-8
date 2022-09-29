@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../images/my-image-1.jpg'
 import Detail from './Exercise-details/Detail';
 import './Profile.css'
@@ -11,7 +11,11 @@ const Profile = (props) => {
         Setbreaktime(y);
         localStorage.setItem('break-Time', y)
     }
+    useEffect(() => {
+        const storedTime = localStorage.getItem('break-Time')
+        Setbreaktime(storedTime)
 
+    }, [])
     return (
         <div className='profile'>
             <div className='self'>

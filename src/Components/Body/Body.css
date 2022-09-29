@@ -16,10 +16,10 @@
     text-align: center;
 }
 
-.main h1,
-h3 {
+.main h1 {
     color: blueviolet;
     text-align: left;
+    font-size: 35px;
 }
 
 .main h3 {

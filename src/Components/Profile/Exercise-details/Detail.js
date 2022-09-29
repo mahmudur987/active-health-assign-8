@@ -2,7 +2,7 @@
 import React from 'react';
 import './Detail.css'
 const Detail = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className='details'>
             <div>

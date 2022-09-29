@@ -31,7 +31,7 @@ const Question = () => {
                 </p>
             </div>
             <div className="question">
-                <h2>where we can use useRffect in react</h2>
+                <h2>where we can use useEffect in react ?</h2>
                 <h3>Answer</h3>
                 <p>useEffect after render: We know that, the useEffect() is used for causing side effects in functional components and it is also capable for handling componentDidMount(), componentDidUpdate() and componentWillUnmount() life-cycle methods of class based components into functional component. Let’s look at an example on how to use the useEffect hook as a feature that can mimic the above mentioned life-cycle methods but in functional components. </p>
             </div>
