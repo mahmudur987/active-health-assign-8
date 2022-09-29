@@ -14,4 +14,16 @@
 
 .main {
     text-align: center;
+    font-size: 30px;
+}
+
+.main h1,
+h3 {
+    color: blueviolet;
+    text-align: left;
+}
+
+.main h3 {
+    color: black;
+    font-weight: 700;
 }

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../images/my-image-1.jpg'
 import Detail from './Exercise-details/Detail';
 import './Profile.css'
 const Profile = (props) => {
 
+    const Times = [10, 20, 30, 40, 50,]
+    const [BreakTime, Setbreaktime] = useState(1)
 
+    const addTime = (y) => {
+        Setbreaktime(y)
+    }
 
     return (
         <div>
@@ -31,14 +36,17 @@ const Profile = (props) => {
             <div className='Add-Break'>
                 <h2>Add a break</h2>
                 <p>
-                    <span>10s</span>
-                    <span>20s</span>
-                    <span>30s</span>
-                    <span>40s</span>
-                    <span>50s</span>
+                    {
+                        Times.map(x => <button key={x} className='btn-break' onClick={() => addTime(x)} >{x}s</button>)
+                    }
                 </p>
             </div>
-            <Detail sum={props.sum}></Detail>
+
+            {
+                Times.map(time => <Detail breaktime={BreakTime} time={time} sum={props.sum} ></Detail>)
+            }
+
+
 
 
 

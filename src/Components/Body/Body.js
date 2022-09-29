@@ -4,7 +4,8 @@ import './Body.css'
 import React, { useEffect, useState } from 'react';
 import Practice from './Practice/Practice';
 import Profile from '../Profile/Profile';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faDumbbell } from '@fortawesome/free-solid-svg-icons'
 const Body = () => {
     const [practices, SetPractices] = useState([]);
     useEffect(() => {
@@ -26,12 +27,12 @@ const Body = () => {
         initialValue
     );
 
-    console.log(sumWithInitial);
+    // console.log(sumWithInitial);
     // console.log(numbers)
     return (
         <div className='body'>
             <div className='main'>
-                <h1>Active For Health</h1>
+                <h1><FontAwesomeIcon icon={faDumbbell} />Active For Health</h1>
                 <h3>Select Todays Exercise</h3>
 
                 <div className='Practice'>
