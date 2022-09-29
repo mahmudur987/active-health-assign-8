@@ -5,8 +5,14 @@ import React, { useEffect, useState } from 'react';
 import Practice from './Practice/Practice';
 import Profile from '../Profile/Profile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faDumbbell } from '@fortawesome/free-solid-svg-icons'
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Body = () => {
+    const notify = () => toast.info("Wow so easy! I can open It");
     const [practices, SetPractices] = useState([]);
     useEffect(() => {
         fetch('items.json').then(res => res.json()).then(data => SetPractices(data))
@@ -44,8 +50,23 @@ const Body = () => {
             </div>
             <div className='Profile'>
                 <Profile sum={sumWithInitial}></Profile>
+                <button onClick={notify} className='btn-complete'>Activity Complets</button>
+
 
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+
+
+            />
 
         </div>
     );
