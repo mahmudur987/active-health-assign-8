@@ -42,7 +42,7 @@ const Body = () => {
                     }
                 </div>
             </div>
-            <div>
+            <div className='Profile'>
                 <Profile sum={sumWithInitial}></Profile>
 
             </div>

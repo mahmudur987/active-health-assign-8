@@ -12,7 +12,7 @@ const Profile = (props) => {
     }
 
     return (
-        <div>
+        <div className='profile'>
             <div className='self'>
 
                 <img src={logo} alt="" />
@@ -43,7 +43,7 @@ const Profile = (props) => {
             </div>
 
             {
-                Times.map(time => <Detail breaktime={BreakTime} time={time} sum={props.sum} ></Detail>)
+                <Detail breaktime={BreakTime} sum={props.sum} ></Detail>
             }
 
 
