@@ -5,7 +5,7 @@ import './Profile.css'
 const Profile = (props) => {
 
     const Times = [10, 20, 30, 40, 50,]
-    const [BreakTime, Setbreaktime] = useState(1)
+    const [BreakTime, Setbreaktime] = useState(0)
 
     const addTime = (y) => {
         Setbreaktime(y)

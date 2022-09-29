@@ -1,0 +1,17 @@
+.question {
+    border: 2px solid olive;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.question h2,
+h3 {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.question p {
+    font-size: 25px;
+    color: darkblue;
+}

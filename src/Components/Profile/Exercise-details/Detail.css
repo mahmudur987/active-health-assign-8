@@ -1,7 +1,7 @@
 .details {
     margin-top: 30px;
     position: relative;
-    height: 3900px;
+
 }
 
 .details p {
@@ -13,7 +13,6 @@
 }
 
 .details div {
-    position: sticky;
-    top: 20px;
-
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
 }
